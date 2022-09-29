@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 - Overloading and Access Modifiers", "02 - Overloading and Access Modifiers.csproj", "{6496AD2A-8C56-41B2-AF05-A19F1F364BA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{25B07BF3-326F-48D5-BC8B-1FB369BAA67A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6496AD2A-8C56-41B2-AF05-A19F1F364BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6496AD2A-8C56-41B2-AF05-A19F1F364BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6496AD2A-8C56-41B2-AF05-A19F1F364BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6496AD2A-8C56-41B2-AF05-A19F1F364BA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4F6D914-EC53-4882-8583-D800241A32AF}
+	EndGlobalSection
+EndGlobal
