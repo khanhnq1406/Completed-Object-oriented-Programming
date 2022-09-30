@@ -1,4 +1,9 @@
-# OOP
+# Object-oriented Programming
+## Table of contents
+- [OOP](#oop)
+- [Overloading and Access Modifiers](#overloading-and-access-modifiers)
+- [Static](#static)
+## OOP
 ### Structure of object-oriented programming
 - **Classes** are user-defined data types that act as the blueprint for individual objects, attributes and methods. <sub>Vehicle</sub>
 - **Objects** are instances of a class created with specifically defined data. Objects can correspond to real-world objects or an abstract entity. When class is defined initially, the description is the only object that is defined. <sub>car, motorcycle, bicycle</sub>
@@ -11,7 +16,7 @@
 - **Inheritance.** Classes can reuse code from other classes. Relationships and subclasses between objects can be assigned, enabling developers to reuse common logic while still maintaining a unique hierarchy. This property of OOP forces a more thorough data analysis, reduces development time and ensures a higher level of accuracy.
 - **Polymorphism.** Objects are designed to share behaviors and they can take on more than one form. The program will determine which meaning or usage is necessary for each execution of that object from a parent class, reducing the need to duplicate code. A child class is then created, which extends the functionality of the parent class. Polymorphism allows different types of objects to pass through the same interface.<br /><sub>Animal speak() -> With Cat "Meow" -> With Dog "Woof"</sub>
 
-# Overloading and Access Modifiers
+## Overloading and Access Modifiers
 ### Access Modifiers
 - public: The code is accessible for all classes.
 - private: The code is only accessible within the same class.
@@ -24,8 +29,8 @@
 ### Overloading
 > In C#, there might be two or more methods in a class with the same name but different numbers, types, and order of parameters, it is called method overloading.
 
-# Static
-## Limitation of using static keyword:  
+## Static
+### Limitation of using static keyword:  
 - Static keyword cannot be used by indexers, finalizers, or types other than classes.
 - A static member is not referenced through an instance.
 - In C#, it is not allowed to use this to reference static methods or property accessors.
