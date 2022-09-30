@@ -35,7 +35,5 @@ internal class Program
         StaticVariable.Test("hello");
         Console.WriteLine("This is string of static variable after assign");
         Console.WriteLine(StaticVariable.str_of_StaticVariable);
-
-
     }
 }

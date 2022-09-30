@@ -25,6 +25,11 @@
 > In C#, there might be two or more methods in a class with the same name but different numbers, types, and order of parameters, it is called method overloading.
 
 # Static
+## Limitation of using static keyword:  
+- Static keyword cannot be used by indexers, finalizers, or types other than classes.
+- A static member is not referenced through an instance.
+- In C#, it is not allowed to use this to reference static methods or property accessors.
+- In C#, if static keyword is used with the class, then the static class always contain static members.
 ### Static Class
 - A static class can only contain static data members, static methods, and a static constructor. 
 - It is not allowed to create objects of the static class. 
@@ -42,8 +47,7 @@
 - Static Constructor has to be invoked only once in the class and it has been invoked during the creation of the first reference to a static member in the class.
 - A static constructor is initialized static fields or data of the class and to be executed only once.
 
-
-
+    
 # Link
 [Object-oriented Programming (OOP)](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP) <br />
 [C# Access Modifiers](https://www.w3schools.com/cs/cs_access_modifiers.php) <br />
