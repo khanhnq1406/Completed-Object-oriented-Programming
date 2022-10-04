@@ -3,6 +3,7 @@
 - [OOP](#oop)
 - [Overloading and Access Modifiers](#overloading-and-access-modifiers)
 - [Static](#static)
+- [Properties](#properties)
 ## OOP
 ### Structure of object-oriented programming
 - **Classes** are user-defined data types that act as the blueprint for individual objects, attributes and methods. <sub>Vehicle</sub>
@@ -52,10 +53,33 @@
 - Static Constructor has to be invoked only once in the class and it has been invoked during the creation of the first reference to a static member in the class.
 - A static constructor is initialized static fields or data of the class and to be executed only once.
 
+## Properties
+Properties are the special type of class members that provides a flexible mechanism to read, write, or compute the value of a private field. Properties can be used as if they are public data members, but they are actually special methods called accessors. This enables data to be accessed easily and helps to promote the flexibility and safety of methods. Encapsulation and hiding of information can also be achieved using properties. It uses pre-defined methods which are “get” and “set” methods which help to access and modify the properties. <br />
+There are different types of properties based on the “get” and “set” accessors: <br />
+- **Read and Write Properties**: When property contains both get and set methods.
+- **Read-Only Properties**: When property contains only get method.
+- **Write Only Properties**: When property contains only set method.
+- **Auto Implemented Properties**: When there is no additional logic in the property accessors and it introduce in C# 3.0.
+### The syntax for Defining Properties:
+```
+<access_modifier> <return_type> <property_name>
+{
+        get { return <private_field> }
+        set { <private_field> = value }
+}
+```
+Where, <access_modifier> can be public, private, protected or internal. <return_type> can be any valid C# type. <property_name> can be user-defined. Properties can be different access modifiers like public, private, protected, internal. Access modifiers define how users of the class can access the property. The get and set accessors for the same property may have different access modifiers. A property may be declared as a static property by using the static keyword or may be marked as a virtual property by using the virtual keyword. <br />
+
+### Accessor Accessibility 
+- We can’t use accessor modifiers on an interface or an explicit interface member implementation.
+- We can use accessor modifiers only if the property has both set and get accessors.
+- If the property is an override modifier, the accessor modifier must match the accessor of the overridden accessor.
+- The accessibility level on the accessor must be more restrictive than the accessibility level on the property.
     
 # Link
-- [Object-oriented Programming (OOP)](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP) <br />
-- [C# Access Modifiers](https://www.w3schools.com/cs/cs_access_modifiers.php) <br />
-- [Difference between Ref and Out keywords in C#](https://www.geeksforgeeks.org/difference-between-ref-and-out-keywords-in-c-sharp/) <br />
-- [C# Method Overloading](https://www.programiz.com/csharp-programming/method-overloading) <br />
-- [Static keyword in C#](https://www.geeksforgeeks.org/static-keyword-in-c-sharp/) <br />
+- [Object-oriented Programming (OOP)](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP) 
+- [C# Access Modifiers](https://www.w3schools.com/cs/cs_access_modifiers.php) 
+- [Difference between Ref and Out keywords in C#](https://www.geeksforgeeks.org/difference-between-ref-and-out-keywords-in-c-sharp/) 
+- [C# Method Overloading](https://www.programiz.com/csharp-programming/method-overloading) 
+- [Static keyword in C#](https://www.geeksforgeeks.org/static-keyword-in-c-sharp/) 
+- [C# | Properties](https://www.geeksforgeeks.org/c-sharp-properties/)
