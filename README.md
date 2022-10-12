@@ -75,7 +75,7 @@ Where, <access_modifier> can be public, private, protected or internal. <return_
 - We can use accessor modifiers only if the property has both set and get accessors.
 - If the property is an override modifier, the accessor modifier must match the accessor of the overridden accessor.
 - The accessibility level on the accessor must be more restrictive than the accessibility level on the property.
-    
+
 # Link
 - [Object-oriented Programming (OOP)](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP) 
 - [C# Access Modifiers](https://www.w3schools.com/cs/cs_access_modifiers.php) 
@@ -83,3 +83,4 @@ Where, <access_modifier> can be public, private, protected or internal. <return_
 - [C# Method Overloading](https://www.programiz.com/csharp-programming/method-overloading) 
 - [Static keyword in C#](https://www.geeksforgeeks.org/static-keyword-in-c-sharp/) 
 - [C# | Properties](https://www.geeksforgeeks.org/c-sharp-properties/)
+- [How to convert a string to a number (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number)
