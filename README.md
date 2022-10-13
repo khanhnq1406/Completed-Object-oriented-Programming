@@ -1,9 +1,19 @@
 # Object-oriented Programming
-## Table of contents
-- [OOP](#oop)
-- [Overloading and Access Modifiers](#overloading-and-access-modifiers)
-- [Static](#static)
-- [Properties](#properties)
+- [Object-oriented Programming](#object-oriented-programming)
+  - [OOP](#oop)
+    - [Structure of object-oriented programming](#structure-of-object-oriented-programming)
+    - [The main principles of OOP](#the-main-principles-of-oop)
+    - [Qualitise of an Object-Oriented System](#qualitise-of-an-object-oriented-system)
+  - [The Difference Between a Framework and a Library](#the-difference-between-a-framework-and-a-library)
+  - [The difference between abstract class and interface](#the-difference-between-abstract-class-and-interface)
+  - [The SOLID Principles of Object-Oriented Programming](#the-solid-principles-of-object-oriented-programming)
+  - [CRC cards](#crc-cards)
+  - [Unified Process](#unified-process)
+    - [**Inception phase**](#inception-phase)
+    - [**Elaboration phase**](#elaboration-phase)
+    - [**Construction phase**](#construction-phase)
+    - [**Transition phase**](#transition-phase)
+- [Link](#link)
 ## OOP
 ### Structure of object-oriented programming
 - **Classes** are user-defined data types that act as the blueprint for individual objects, attributes and methods. <sub>Vehicle</sub>
@@ -12,75 +22,68 @@
 - **Attributes** are defined in the class template and represent the state of an object. Objects will have data stored in the attributes field. Class attributes belong to the class itself. <sub>weight, color</sub>
 
 ### The main principles of OOP
-- **Encapsulation.** This principle states that all important information is contained inside an object and only select information is exposed. The implementation and state of each object are privately held inside a defined class. Other objects do not have access to this class or the authority to make changes. They are only able to call a list of public functions or methods. This characteristic of data hiding provides greater program security and avoids unintended data corruption.
+- **Encapsulation.** This principle states that **all important information is contained inside an object and only select information is exposed**. The implementation and state of each object are privately held inside a defined class. Other objects do not have access to this class or the authority to make changes. They are only able to call a list of public functions or methods. This characteristic of data hiding provides greater program security and avoids unintended data corruption. (private, public)
 - **Abstraction.** Objects only reveal internal mechanisms that are relevant for the use of other objects, hiding any unnecessary implementation code. The derived class can have its functionality extended. This concept can help developers more easily make additional changes or additions over time.
-- **Inheritance.** Classes can reuse code from other classes. Relationships and subclasses between objects can be assigned, enabling developers to reuse common logic while still maintaining a unique hierarchy. This property of OOP forces a more thorough data analysis, reduces development time and ensures a higher level of accuracy.
-- **Polymorphism.** Objects are designed to share behaviors and they can take on more than one form. The program will determine which meaning or usage is necessary for each execution of that object from a parent class, reducing the need to duplicate code. A child class is then created, which extends the functionality of the parent class. Polymorphism allows different types of objects to pass through the same interface.<br /><sub>Animal speak() -> With Cat "Meow" -> With Dog "Woof"</sub>
+- **Inheritance.** Inheritance is a feature or a process in which, new classes are created from the existing classes. The new class created is called “derived class” or “child class” and the existing class is known as the “base class” or “parent class”. **The derived class now is said to be inherited from the base class.** This property of OOP forces a more thorough data analysis, reduces development time and ensures a higher level of accuracy.
+- **Polymorphism.** Objects are designed to share behaviors and **they can take on more than one form**. The program will determine which meaning or usage is necessary for each execution of that object from a parent class, reducing the need to duplicate code. A child class is then created, which extends the functionality of the parent class. Polymorphism allows different types of objects to pass through the same interface. (overriding and overloading)<br /><sub>Animal speak() -> With Cat "Meow" -> With Dog "Woof"</sub>
 
-## Overloading and Access Modifiers
-### Access Modifiers
-- public: The code is accessible for all classes.
-- private: The code is only accessible within the same class.
-- protected: The code is accessible within the same class, or in a class that is inherited from that class. 
+### Qualitise of an Object-Oriented System
+- Reusability
+- Reliability
+- Robustness
+- Extensibility
+- Maintainability
+## The Difference Between a Framework and a Library
+https://www.freecodecamp.org/news/the-difference-between-a-framework-and-a-library-bd133054023f/
+- Frameworks and libraries are both code written by someone else that helps you perform some common tasks in a less verbose way.
+- A framework inverts the control of the program. It tells the developer what they need. A library doesn’t. The programmer calls the library where and when they need it.
+- The degree of freedom a library or framework gives the developer will dictate how “opinionated” it is.
 
-### Ref and Out
-- Ref: It is necessary the parameters should initialize before it pass to `ref`.
-- Out: It is not necessary to initialize parameters before it pass to `out`.
+## The difference between abstract class and interface
+https://www.javatpoint.com/difference-between-abstract-class-and-interface
+| Abstract class                                                                   | Interface                                                     |
+|----------------------------------------------------------------------------------|---------------------------------------------------------------|
+| 1) Abstract class can have abstract and non-abstract methods.                    | Interface can have only abstract methods.                     |
+| 2) Abstract class doesn't support multiple inheritance.                          | Interface supports multiple inheritance.                      |
+| 3) Abstract class can have final, non-final, static and non-static variables.    | Interface has only static and final variables.                |
+| 4) Abstract class can provide the implementation of interface.                   | Interface can't provide the implementation of abstract class. |
+| 5) The abstract keyword is used to declare abstract class.                       | The interface keyword is used to declare interface.           |
+| 6) An abstract class can extend another class and implement multiple interfaces. | An interface can extend another interface only.               |
+| 7) An abstract class can have class members like private, protected, etc.        | Members of an interface are public by default.                |
 
-### Overloading
-> In C#, there might be two or more methods in a class with the same name but different numbers, types, and order of parameters, it is called method overloading.
+## The SOLID Principles of Object-Oriented Programming
+https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
+<br />
+Following the SOLID acronym:
+- **The Single Responsibility Principle:** a class should **do one thing** and therefore it should have only a single reason to change.
+- **The Open-Closed Principle:** classes should be **open for extension** and **closed to modification**. Modification means changing the code of an existing class, and extension means adding new functionality. 
+- **The Liskov Substitution Principle:** subclasses should be substitutable for their base classes. This means that, given that class B is a subclass of class A, we should be able to pass an object of class B to any method that expects an object of class A and the method should not give any weird output in that case.
+- **The Interface Segregation Principle:** Segregation means **keeping things separated**, and the Interface Segregation Principle is about separating the interfaces.
+- **The Dependency Inversion Principle:** our classes should **depend upon interfaces or abstract classes** instead of concrete classes and functions.
 
-## Static
-### Limitation of using static keyword:  
-- Static keyword cannot be used by indexers, finalizers, or types other than classes.
-- A static member is not referenced through an instance.
-- In C#, it is not allowed to use this to reference static methods or property accessors.
-- In C#, if static keyword is used with the class, then the static class always contain static members.
-### Static Class
-- A static class can only contain static data members, static methods, and a static constructor. 
-- It is not allowed to create objects of the static class. 
-- Static classes are sealed, means one cannot inherit a static class from another class.
+## CRC cards
+CRC cards, which characterize objects by class name, responsibilities, and collaborators.
+- The **class name** of an object creates a vocabulary for discussing a design. 
+- **Responsibilities** identify problems to be solved. 
+- All objects stand in **relationship** to others, on whom they rely for services and control.
 
-### Static Variable
-- When a variable is declared as static, then a single copy of the variable is created and shared among all objects at the class level.
--  Static variables are accessed with the name of the class, they do not require any object for access.
-
-### Static Method
-- Static methods are accessed with the name of the class.
-- A static method can access static and non-static fields, static fields are directly accessed by the static method without class name whereas non-static fields require objects.
-
-### Static Constructor
-- Static Constructor has to be invoked only once in the class and it has been invoked during the creation of the first reference to a static member in the class.
-- A static constructor is initialized static fields or data of the class and to be executed only once.
-
-## Properties
-Properties are the special type of class members that provides a flexible mechanism to read, write, or compute the value of a private field. Properties can be used as if they are public data members, but they are actually special methods called accessors. This enables data to be accessed easily and helps to promote the flexibility and safety of methods. Encapsulation and hiding of information can also be achieved using properties. It uses pre-defined methods which are “get” and “set” methods which help to access and modify the properties. <br />
-There are different types of properties based on the “get” and “set” accessors: <br />
-- **Read and Write Properties**: When property contains both get and set methods.
-- **Read-Only Properties**: When property contains only get method.
-- **Write Only Properties**: When property contains only set method.
-- **Auto Implemented Properties**: When there is no additional logic in the property accessors and it introduce in C# 3.0.
-### The syntax for Defining Properties:
-```
-<access_modifier> <return_type> <property_name>
-{
-        get { return <private_field> }
-        set { <private_field> = value }
-}
-```
-Where, <access_modifier> can be public, private, protected or internal. <return_type> can be any valid C# type. <property_name> can be user-defined. Properties can be different access modifiers like public, private, protected, internal. Access modifiers define how users of the class can access the property. The get and set accessors for the same property may have different access modifiers. A property may be declared as a static property by using the static keyword or may be marked as a virtual property by using the virtual keyword. <br />
-
-### Accessor Accessibility 
-- We can’t use accessor modifiers on an interface or an explicit interface member implementation.
-- We can use accessor modifiers only if the property has both set and get accessors.
-- If the property is an override modifier, the accessor modifier must match the accessor of the overridden accessor.
-- The accessibility level on the accessor must be more restrictive than the accessibility level on the property.
+## Unified Process
+https://en.wikipedia.org/wiki/Unified_Process <br />
+<img src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Unified_Process_Model_for_Iterative_Development.svg/400px-Unified_Process_Model_for_Iterative_Development.svg.png'></img> <br />
+### **Inception phase**
+Develop an approximate vision of the system, make the business case, define the <mark>scope</mark>, and produce a rough <mark>cost estimate</mark> and <mark>project schedule.</mark>
+### **Elaboration phase**
+During the Elaboration phase, the project team is expected to capture a healthy majority of the system requirements. However, the primary goals of Elaboration are to address known <mark>risk factors and to establish and validate the system architecture.</mark> Common processes undertaken in this phase include the creation of use case diagrams, conceptual diagrams (class diagrams with only basic notation) and package diagrams (architectural diagrams). <br />
+The architecture is validated primarily through the implementation of an Executable Architecture Baseline. This is a partial implementation of the system which includes the core most architecturally significant components. It is built in a series of small time-boxed iterations. By the end of the Elaboration phase, the system architecture must have stabilized and the executable architecture baseline must demonstrate that the architecture will support the key system functionality and exhibit the right behavior in terms of performance, scalability, and cost.<br />
+The final Elaboration phase deliverable is a plan (including cost and schedule estimates) for the Construction phase. At this point the plan should be accurate and credible since it should be based on the Elaboration phase experience and since significant risk factors should have been addressed during the Elaboration phase.
+### **Construction phase**
+Construction is the largest phase of the project. In this phase, <mark>the remainder of the system is built on the foundation laid in Elaboration.</mark> System features are implemented in a series of short, time-boxed iterations. Each iteration results in an executable release of the software. It is customary to write full-text use cases during the construction phase and each one becomes the start of a new iteration. Common Unified Modeling Language (UML) diagrams used during this phase include activity diagrams, sequence diagrams, collaboration diagrams, State Transition diagrams and interaction overview diagrams. Iterative implementation for the lower risks and easier elements are done. The final Construction phase deliverable is software ready to be deployed in the Transition phase.
+### **Transition phase**
+The final project phase is Transition. In this phase <mark>the system is deployed to the target users.</mark> Feedback received from an initial release (or initial releases) may result in further refinements to be incorporated over the course of several Transition phase iterations. The Transition phase also includes system conversions and user training.
 
 # Link
 - [Object-oriented Programming (OOP)](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP) 
-- [C# Access Modifiers](https://www.w3schools.com/cs/cs_access_modifiers.php) 
-- [Difference between Ref and Out keywords in C#](https://www.geeksforgeeks.org/difference-between-ref-and-out-keywords-in-c-sharp/) 
-- [C# Method Overloading](https://www.programiz.com/csharp-programming/method-overloading) 
-- [Static keyword in C#](https://www.geeksforgeeks.org/static-keyword-in-c-sharp/) 
-- [C# | Properties](https://www.geeksforgeeks.org/c-sharp-properties/)
-- [How to convert a string to a number (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number)
+- [The Difference Between a Framework and a Library](https://www.freecodecamp.org/news/the-difference-between-a-framework-and-a-library-bd133054023f/)
+- [Difference between abstract class and interface](https://www.javatpoint.com/difference-between-abstract-class-and-interface)
+- [The SOLID Principles of Object-Oriented Programming Explained in Plain English](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
+- [Unified Process](https://en.wikipedia.org/wiki/Unified_Process)
